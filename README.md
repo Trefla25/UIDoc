@@ -15,26 +15,29 @@ Key Components of the Communication History Page:
 **Connectors Panel**
 Located on the left side, this retractable panel lists all active connectors, categorized by type, making navigation straightforward. Users can switch between connectors easily and choose to pin the panel for constant visibility.
 
+![](https://raw.githubusercontent.com/Trefla25/UIDoc/main/ConnectorsPanel.png)
+
 For instance, in this example, two active connectors of type PacketConnector are available: Device01 and Device02. The highlighted connector (Device01) corresponds to the data currently displayed on the page.
 
-**View Tabs**
+## View Tabs
 Positioned at the top, just below the Element Logic navigation bar, these tabs allow users to switch between different views. Views are highly customizable and defined in UIViewConfig.json, specifying how packets appear in table grids. A view can either consolidate all packets into a single grid or separate them by channel into distinct grids.
 
-![](https://raw.githubusercontent.com/Trefla25/UIDoc/main/All.png)
-![](https://raw.githubusercontent.com/Trefla25/UIDoc/main/WithoutAck.png)
-![](https://raw.githubusercontent.com/Trefla25/UIDoc/main/OnlySender.png)
+![](https://raw.githubusercontent.com/Trefla25/UIDoc/main/Alle.png)
+![](https://raw.githubusercontent.com/Trefla25/UIDoc/main/All-in-One.png)
+![](https://raw.githubusercontent.com/Trefla25/UIDoc/main/DataOnly.png)
 
 In this example, three views have been configured:
 
 1. **All**: Displays packets in four distinct table grids:
-   - The top-left grid unifies all packets with the channel either "D01 -> D02 Data" or "D02 -> D01 Data".
+   - The top-left grid exclusively shows packets of the channel "D01 -> D02 Data".
    - The top-right grid exclusively shows packets of the channel "D02 -> D01 Data".
-   - The bottom-left grid exclusively displays "D01 -> D02 Data".
+   - The bottom-left grid displays both "D01 -> D02 Errors" and "D02 -> D01 Errors".
    - The bottom-right grid displays both "D01 -> D02 Ack" and "D02 -> D01 Ack".
-2. **Without Ack:** Displays the packets in two table grids:
-   - The top grid shows only "D01 -> D02 Data" packets.
-   - The bottom grid shows only "D02 -> D01 Data".
-3. **Only Sender:** Displays only one table grid containing the packets with the channel "D01 -> D02 Data".
+2. **All-in-One:** Displays a single grid that contains the packets from all existing channels".
+3. **Data Only:** Displays the packets in two table grids:
+   - The left grid shows only "D01 -> D02 Data" packets.
+   - The right grid shows only "D02 -> D01 Data" packets.
+
 
 ## Filter
 
@@ -194,6 +197,9 @@ The **Group Packets** switch allows users to toggle between **grouped** and **in
 
 This feature helps users customize their view based on preference, offering both a structured, hierarchical display and a flat, simplified list for packet analysis.
 
+## Lock Scroll
+![](https://raw.githubusercontent.com/Trefla25/UIDoc/main/LockScroll.png)
+If enabled and multiple table grids are present, scrolling on one grid will synchronize the scroll position across all grids to the closest packets (closest packet Id). This feature is only visible with more than one grid.
 
 ## Packet Data Grid
 
