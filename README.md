@@ -15,8 +15,6 @@ Key Components of the Communication History Page:
 **Connectors Panel**
 Located on the left side, this retractable panel lists all active connectors, categorized by type, making navigation straightforward. Users can switch between connectors easily and choose to pin the panel for constant visibility.
 
-![](https://raw.githubusercontent.com/Trefla25/UIDoc/main/SidePanel.png)
-
 For instance, in this example, two active connectors of type PacketConnector are available: Device01 and Device02. The highlighted connector (Device01) corresponds to the data currently displayed on the page.
 
 **View Tabs**
